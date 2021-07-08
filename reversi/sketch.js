@@ -7,12 +7,14 @@ function Move(x, y, swaps) {
     this.y = y;
     this.swaps = swaps||[];
 }
+function StaticEval(score) {
+    this.score=score;
+    this.bestm=null;
+}
 function Board() {
-    this.arr = [];
     this.moves = new Array(1000);
     this.counter = 0;
-    this.arr[SIZE+2]=[];
-    this.arr[SIZE+2][SIZE+2]=0;
+    this.arr = [];
     for (let i = 0; i < SIZE + 2; i++) {
         this.arr[i] = [];
         for (let j = 0; j < SIZE + 2; j++)
@@ -27,6 +29,9 @@ function Board() {
     this.arr[5][4] = 2;
     this.arr[4][5] = 2;
     this.arr[5][5] = 1;
+    this.arr[SIZE+2]=[];
+    this.arr[SIZE+2][SIZE+2]=0;
+    //FUNCTIONS -\/-
     this.MakeMove = (move) => {
         this.arr[move.x][move.y] = this.counter % 2 + 1;
         this.moves[this.counter++] = move;
@@ -69,7 +74,11 @@ function Board() {
         Look1(move.x, move.y, this.arr, inc, inc);
         Look1(move.x, move.y, this.arr, inc, dec);
         Look1(move.x, move.y, this.arr, dec, inc);
-        if (m.swaps.length!=0) this.MakeMove(m); 
+        if (m.swaps.length!=0) {
+            this.MakeMove(m);
+            return true; 
+        }
+        return false;
     }
     this.UndoMove = () => {
         this.counter--;
@@ -121,7 +130,14 @@ function Board() {
                 }
             }
         }
+        if (listmoves.length==0) {
+            return null;
+        }
         return listmoves;
+    }
+    //skip move
+    this.pass=()=>{
+        this.MakeMove(new Move(SIZE+2, SIZE+2, [[[SIZE+2, SIZE+2]]]));
     }
     this.show = () => {
         stroke(0, 0, 0);
@@ -145,11 +161,15 @@ function Game() {
     this.gomax=(depth)=>{
         if (depth==0) return this.evaluation();
         let x=this.board.GenMoves();
-        let score, mscore=-Infinity;
-        for (let k in x) {
+        if (x==null) return this.gomin(depth-1);
+        let score, mscore=new StaticEval(-Infinity);
+        for (let k of x) {
             this.board.MakeMove(k);
             score=this.gomin(depth-1);
-            if (score>mscore) mscore=score;
+            if (score.score>mscore.score) {
+                mscore.score=score.score;
+                mscore.bestm=k;
+            }
             this.board.UndoMove();
         }
         return mscore;
@@ -157,15 +177,30 @@ function Game() {
     this.gomin=(depth)=>{
         if (depth==0) return this.evaluation();
         let x=this.board.GenMoves();
-        let score, mscore=Infinity;
+        if (x==null) return this.gomax(depth-1);
+        let score, mscore=new StaticEval(Infinity);
         for (let k of x) {
-            print(k);
             this.board.MakeMove(k);
             score=this.gomax(depth-1);
-            if (score<mscore) mscore=score;
+            if (score.score<mscore.score) {
+                mscore.score=score.score;
+                mscore.bestm=k;
+            }
             this.board.UndoMove();
         }
         return mscore;
+    }
+    this.countmaterial=()=>{
+        let k1=0, k2=0;
+        for (let i = 1; i <= SIZE; i++) {
+            for (let j = 1; j <= SIZE; j++) {
+                if (this.board.arr[i][j] == 1) 
+                    k1++;
+                else if (this.board.arr[i][j] == 2)
+                    k2++; 
+            }
+        }
+        return {k1:k1, k2:k2};
     }
     this.evaluation=()=>{
         let k1=0, k2=0;
@@ -173,30 +208,65 @@ function Game() {
             for (let j = 1; j <= SIZE; j++) {
                 if (this.board.arr[i][j] == 1) 
                     k1++;
-                else if (this.arr[i][j] == 2)
+                else if (this.board.arr[i][j] == 2)
                     k2++; 
             }
         }
-        return k2-k1;
+        return new StaticEval(k1-k2);
     }
     this.think=function(depth) {
         return this.gomin(depth);
     }
 }
 let b;
-
+let slider;
+let x;
 function setup() {
-    createCanvas(WIDTH, HEIGHT);
+    createCanvas(WIDTH+10, HEIGHT);
     b = new Game();
+    slider=createSlider(1, 10, 2);
 }
 
 function draw() {
     background(0, 190, 0);
     translate(-CIRCLED / 2, -CIRCLED / 2);
     b.board.show();
+    fill(0);
+}
+function ComputerMove() {
+    let x=b.think(slider.value());
+    if (x.bestm==null) return false;
+    b.board.MakeMove(x.bestm);
+    print(x);
+    return true;
 }
 function mousePressed() {
-    b.board.MakeSafeMove(new Move(Math.floor(mouseX/CIRCLED)+1, Math.floor(mouseY/CIRCLED)+1));
-    let x=Math.floor(mouseX/CIRCLED)+1;
-    print(x);
+    if (b.board.MakeSafeMove(new Move(Math.floor(mouseX/CIRCLED)+1, Math.floor(mouseY/CIRCLED)+1))) {
+        if (ComputerMove()==false) {
+            b.board.pass();
+            if (b.board.GenMoves()==null) {
+                let s="Game Ended: \n";
+                let k3=b.countmaterial();
+                s+="Black: "+k3.k2.toString()+"\n";
+                s+="White: "+k3.k1.toString();
+                alert(s);
+                //noLoop();
+                return;
+            }
+        }
+        else {
+            while(b.board.GenMoves()==null) {
+                b.board.pass();
+                if (ComputerMove()==false) {
+                    let s="Game Ended: \n";
+                    let k3=b.countmaterial();
+                    s+="Black: "+k3.k2.toString()+"\n";
+                    s+="White: "+k3.k1.toString();
+                    alert(s);
+                    //noLoop();
+                    return;
+                }
+            }
+        }
+    }
 }
