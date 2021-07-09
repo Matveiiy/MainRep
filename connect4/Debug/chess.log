@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(459,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (checkers.vcxproj, chess.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Connect4.cpp
+C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\chess\Connect4.h(49,25): warning C4552: "!": результат выражения не используется
+C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\chess\Connect4.h(50,30): warning C4552: "&": результат выражения не используется
+C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\chess\Connect4.h(77,1): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\chess\Connect4.h(78,1): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\chess\Connect4.h(79,1): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\chess\Connect4.h(80,1): warning C4554: "&": проверьте приоритет операторов на ошибки; для уточнения приоритета используйте скобки
+C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\chess\Connect4.cpp(22,18): warning C4244: =: преобразование "uint64_t" в "long", возможна потеря данных
+  chess.vcxproj -> C:\Users\bma20\OneDrive\Рабочий стол\checkers — копия\Debug\connect4.lib
