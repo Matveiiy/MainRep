@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\main.cpp(20,6): warning C4101: k: неиспользованная локальная переменная
+  Создание кода
+  1 of 173 functions ( 0.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  chess1.vcxproj -> C:\Users\bma20\Desktop\projects\c++\chess1\x64\Release\chess1.exe

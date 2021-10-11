@@ -1,0 +1,9 @@
+﻿  main.cpp
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\Move.h(114,28): warning C4244: аргумент: преобразование "uint64_t" в "unsigned long", возможна потеря данных
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\Move.h(125,28): warning C4244: аргумент: преобразование "uint64_t" в "unsigned long", возможна потеря данных
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\Move.h(136,28): warning C4244: аргумент: преобразование "uint64_t" в "unsigned long", возможна потеря данных
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\Move.h(147,28): warning C4244: аргумент: преобразование "uint64_t" в "unsigned long", возможна потеря данных
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\Move.h(159,28): warning C4244: аргумент: преобразование "uint64_t" в "unsigned long", возможна потеря данных
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\Move.h(163,33): warning C4244: аргумент: преобразование "uint64_t" в "unsigned long", возможна потеря данных
+C:\Users\bma20\Desktop\projects\c++\chess1\chess1\Move.h(206,22): warning C4018: <: несоответствие типов со знаком и без знака
+  chess1.vcxproj -> C:\Users\bma20\Desktop\projects\c++\chess1\Debug\chess1.exe
