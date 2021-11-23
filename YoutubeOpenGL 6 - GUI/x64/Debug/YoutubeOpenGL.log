@@ -1,0 +1,24 @@
+﻿  glad.c
+  Main.cpp
+  shaderClass.cpp
+  stb.cpp
+  Texture.cpp
+  VAO.cpp
+C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\VAO.cpp(6,63): warning C4244: аргумент: преобразование "GLsizeiptr" в "GLsizei", возможна потеря данных
+  Создание кода...
+glfw3.lib(context.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(context.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(init.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(init.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(input.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(input.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(monitor.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(monitor.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(vulkan.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(vulkan.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(window.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(window.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(win32_init.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(win32_init.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(win32_joystick.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(win32_joystick.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(win32_monitor.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(win32_monitor.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(win32_time.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(win32_time.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(win32_thread.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(win32_thread.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(win32_window.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(win32_window.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(wgl_context.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(wgl_context.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(egl_context.obj) : warning LNK4099: "" PDB не найден с "glfw3.lib(egl_context.obj)" или на ""; компоновка объекта выполняется как при отсутствии отладочных данных
+glfw3.lib(osmesa_context.obj) : warning LNK4099: "glfw.pdb" PDB не найден с "glfw3.lib(osmesa_context.obj)" или на "C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\glfw.pdb"; компоновка объекта выполняется как при отсутствии отладочных данных
+  YoutubeOpenGL.vcxproj -> C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\YoutubeOpenGL.exe

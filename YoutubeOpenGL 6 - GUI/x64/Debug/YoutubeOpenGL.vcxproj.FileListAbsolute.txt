@@ -1,0 +1,3 @@
+C:\Users\bma20\Downloads\opengl-tutorials-main\opengl-tutorials-main\YoutubeOpenGL 6 - Textures\x64\Debug\YoutubeOpenGL.exe
+C:\Users\bma20\Desktop\YoutubeOpenGL 6 - Textures\x64\Debug\YoutubeOpenGL.exe
+C:\Users\bma20\Desktop\YoutubeOpenGL 6 - GUI\x64\Debug\YoutubeOpenGL.exe
