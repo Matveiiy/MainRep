@@ -1,0 +1,15 @@
+D:\proj\ChessEngine\ChessEngine\bin\Debug\net6.0\ChessEngine.exe
+D:\proj\ChessEngine\ChessEngine\bin\Debug\net6.0\ChessEngine.deps.json
+D:\proj\ChessEngine\ChessEngine\bin\Debug\net6.0\ChessEngine.runtimeconfig.json
+D:\proj\ChessEngine\ChessEngine\bin\Debug\net6.0\ChessEngine.dll
+D:\proj\ChessEngine\ChessEngine\bin\Debug\net6.0\ChessEngine.pdb
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.csproj.AssemblyReference.cache
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.GeneratedMSBuildEditorConfig.editorconfig
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.AssemblyInfoInputs.cache
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.AssemblyInfo.cs
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.csproj.CoreCompileInputs.cache
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.dll
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\refint\ChessEngine.dll
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.pdb
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ChessEngine.genruntimeconfig.cache
+D:\proj\ChessEngine\ChessEngine\obj\Debug\net6.0\ref\ChessEngine.dll
